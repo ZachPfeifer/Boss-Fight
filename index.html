@@ -7,22 +7,32 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="game.css">
   <title>Boss Battle Trial</title>
 </head>
 
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-12">
-        <div class="boss">
-          <h1>Boss</h1>
+      <div class="offset-4 col-12">
+        <h1>Overlord Boss:</h1>
+        <div id="target" class="target">
+          <div><img src="/images/boss.gif" alt="" width="200px">
+          </div>
+          <div>
+            <span>Boss: </span><span id="name">--</span>
+            <span>Hits: </span><span id="hits">--</span>
+            <span>Health: <span id="health"> --</span></span>
+          </div>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-4 player-1">
         <h2>Player 1</h2>
+        <button class="slap" onClick="slap()">Slap</button>
+        <button class="kick" onClick="kick()">Kick</button>
+        <button class="punch" onClick="punch()">Punch</button>
       </div>
       <div class="col-4 player-2">
         <h2>Player 2</h2>
@@ -35,7 +45,7 @@
   </div>
 
 
-  <script src="app.js"></script>
+  <script src="game.js"></script>
 </body>
 
 </html>
