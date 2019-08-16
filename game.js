@@ -43,8 +43,15 @@ function kick() {
 
   update()
 }
+//item Functions
 function giveHealthPosions() {
-
+  target.items.push('healthPosion')
+}
+function giveThrowAble() {
+  target.items.push('throwAble')
+}
+function giveWeaponMod() {
+  target.items.push('weaponMod')
 }
 
 function update() { // This will be responsible for updating the user interface whenever a value changes.
