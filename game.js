@@ -1,7 +1,11 @@
 // let health = 100
 // let name = "Demon Knight"
 // let hits = 0
-let hiddenElem = document.getElementById("hidden")
+let hiddenElem1 = document.getElementById("hidden1")
+let hiddenElem2 = document.getElementById("hidden2")
+let hiddenElem3 = document.getElementById("hidden3")
+
+
 let target = {
   name: 'Demon Knight',
   health: 100,
@@ -50,18 +54,18 @@ function kick() {
 function giveHealthPosions() {
   target.backpack.push(items.healthPosion)
   //Remove Hidden / Active item
-  document.getElementById("hidden").innerHTML = "Estus Flask is Active +5 Damage";
-  hiddenElem.classList.remove('hidden')
+  document.getElementById("hidden1").innerHTML = "Estus Flask is Active +5 Damage";
+  hiddenElem1.classList.remove('hidden1')
 }
 function giveThrowAble() {
   target.backpack.push(items.throwAble)
-  document.getElementById("hidden").innerHTML = "Fire Weapon Mod is Active +10 Damage";
-  hiddenElem.classList.remove('hidden')
+  document.getElementById("hidden2").innerHTML = "Fire Weapon Mod is Active +10 Damage";
+  hiddenElem2.classList.remove('hidden2')
 }
 function giveWeaponMod() {
   target.backpack.push(items.weaponMod)
-  document.getElementById("hidden").innerHTML = "Charcoal Pin Resin is Active +15 Damage";
-  hiddenElem.classList.remove('hidden')
+  document.getElementById("hidden3").innerHTML = "Charcoal Pin Resin is Active +15 Damage";
+  hiddenElem3.classList.remove('hidden3')
 }
 //NOTE New item Function
 // function item(){

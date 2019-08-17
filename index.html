@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=MedievalSharp" />
   <link rel="stylesheet" href="game.css">
   <title>Boss Battle Trial</title>
 </head>
@@ -14,7 +15,7 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="offset-3 col-4 boss-info">
+      <div class="offset-4 col-4 boss-info">
         <h1 class="text-align-center"><b> Overlord Boss: </b></h1>
         <div id="target" class="target">
           <div><img class="" src="/images/boss.gif" alt="Demon Knight" width="400px">
@@ -47,16 +48,16 @@
         <div class="row items">
           <div class="col-10">
             <img src="images/Item_Estus_Flask.png" alt="" width="25px" height="25px">
-            <button class="healthPosion" onClick="giveHealthPosions()">Estus Flask +5 DMG</button>
+            <button class="healthPosion" onClick="giveHealthPosions()">Estus Flask</button>
           </div>
           <div class="col-10">
             <img src="images/Firebomb.png" alt="" width="25px" height="25px">
-            <button class="fireMod" onClick="giveThrowAble()">Fire Weapon +10 DMG</button>
+            <button class="fireMod" onClick="giveThrowAble()">Fire Weapon</button>
             <div class="col-10">
             </div>
             <img src="images/Charcoal_Pine_Resin.png" alt="giveHealthPosions" width="25px" height="25px">
-            <button class="weaponMod" onClick="giveWeaponMod">Charcoal Pine Resin +15 DMG</button>
-            <p>Active Items: <p id="hidden" class="hidden">--</p>
+            <button class="weaponMod" onClick="giveWeaponMod()">Charcoal Pine Resin</button>
+            <p>Active Items: <p id="hidden1" class="hidden1"><b> -- </b></p>
             </p>
           </div>
 
@@ -80,7 +81,7 @@
         <div class="row items">
           <div class="col-10">
             <img src="images/Item_Estus_Flask.png" alt="" width="25px" height="25px">
-            <button class="healthPosion" onClick="useHealthPosions()">Estus Flask</button>
+            <button class="healthPosion" onClick="giveHealthPosions()">Estus Flask</button>
           </div>
           <div class="col-10">
             <img src="images/Firebomb.png" alt="" width="25px" height="25px">
@@ -88,7 +89,9 @@
             <div class="col-10">
             </div>
             <img src="images/Charcoal_Pine_Resin.png" alt="" width="25px" height="25px">
-            <button class="weaponMod" onClick="giveWeaponMod">Charcoal Pine Resin</button>
+            <button class="weaponMod" onClick="giveWeaponMod()">Charcoal Pine Resin</button>
+            <p>Active Items: <p id="hidden2" class="hidden2"><b> -- </b></p>
+
           </div>
         </div>
 
@@ -109,7 +112,7 @@
         <div class="row items">
           <div class="col-10">
             <img src="images/Item_Estus_Flask.png" alt="" width="25px" height="25px">
-            <button class="healthPosion" onClick="useHealthPosions()">Estus Flask</button>
+            <button class="healthPosion" onClick="giveHealthPosions()">Estus Flask</button>
           </div>
           <div class="col-10">
 
@@ -118,7 +121,9 @@
             <div class="col-10">
             </div>
             <img src="images/Charcoal_Pine_Resin.png" alt="" width="25px" height="25px">
-            <button class="weaponMod" onClick="giveWeaponMod">Charcoal Pine Resin</button>
+            <button class="weaponMod" onClick="giveWeaponMod()">Charcoal Pine Resin</button>
+            <p>Active Items: <p id="hidden3" class="hidden3"><b> -- </b></p>
+
           </div>
 
         </div>
