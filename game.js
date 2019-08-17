@@ -54,6 +54,11 @@ function giveThrowAble() {
 function giveWeaponMod() {
   target.items.push('weaponMod')
 }
+//NOTE New item Function
+// function item(){
+// if ()
+//}
+
 //NOTE  Add Mods 
 function addMod() {
   //I C FE
