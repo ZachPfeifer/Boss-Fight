@@ -1,0 +1,35 @@
+body{
+  background-image: url(/images/background1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: crimson;
+}
+h1{
+  color: black;
+}
+h2{
+  color: black;
+}
+.all-players,  .boss-info{
+float:left;
+color:black;
+background: burlywood url('') no-repeat local right;
+overflow:hidden;
+text-align: justify;
+font-family:arial;
+opacity: .9;
+fill-opacity: inherit;
+font-size:14px;
+border: 1px;
+border-color: black;
+border-style: ridge;
+border-radius: 15px 50px;
+margin-bottom: 16px;
+padding: 20px;
+padding-left: 40px;
+padding-right: 7px;
+
+}
+img{
+  padding: 5px;
+}
