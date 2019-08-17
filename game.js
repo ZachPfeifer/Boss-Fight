@@ -23,7 +23,7 @@ var items = {
   throwAble: {
     name: 'Fire Bomb',
     modifier: 10,
-    description: 'Burns Target for 10 damage.'
+    description: 'Burns Target for +10 damage.'
   },
   weaponMod: {
     name: 'Charcoal Pine Resin',
@@ -32,20 +32,20 @@ var items = {
   },
 }
 //NOTE Actions
-function slap() {
+function jab() {
   target.health -= 1 + addMod()
   target.hits += 1
 
 
   update()
 }
-function punch() {
+function slash() {
   target.health -= 5 + addMod()
   target.hits += 1
 
   update()
 }
-function kick() {
+function thrust() {
   target.health -= 10 + addMod()
   target.hits += 1
 
