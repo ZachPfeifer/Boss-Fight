@@ -1,6 +1,7 @@
 // let health = 100
 // let name = "Demon Knight"
-// let hits = 0
+// let hits = 
+
 let hiddenElem1 = document.getElementById("hidden1")
 let hiddenElem2 = document.getElementById("hidden2")
 let hiddenElem3 = document.getElementById("hidden3")
