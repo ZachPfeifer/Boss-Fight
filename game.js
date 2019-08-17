@@ -5,7 +5,7 @@ let target = {
   name: 'Demon Knight',
   health: 100,
   hits: 0,
-  item: []
+  Backpack: []
 }
 //NOTE Items
 var items = {
@@ -27,33 +27,33 @@ var items = {
 }
 //NOTE Actions
 function slap() {
-  target.health -= 1
+  target.health -= 1 + addMod()
   target.hits += 1
 
 
   update()
 }
 function punch() {
-  target.health -= 5
+  target.health -= 5 + addMod()
   target.hits += 1
 
   update()
 }
 function kick() {
-  target.health -= 10
+  target.health -= 10 + addMod()
   target.hits += 1
 
   update()
 }
 //NOTE item Functions
 function giveHealthPosions() {
-  target.items.push('healtosion')
+  target.Backpack.push(items.healthPosion)
 }
 function giveThrowAble() {
-  target.items.push('throwAble')
+  target.Backpack.push(items.throwAble)
 }
 function giveWeaponMod() {
-  target.items.push('weaponMod')
+  target.Backpack.push(items.weaponMod)
 }
 //NOTE New item Function
 // function item(){
@@ -64,8 +64,8 @@ function giveWeaponMod() {
 function addMod() {
   //I C FE
   let modTotal = 0;
-  for (let i = 0; i < target.item.length; i++) {
-    modTotal = items[i] + items[i].modifier;
+  for (let i = 0; i < target.Backpack.length; i++) {
+    modTotal = target.Backpack[i].modifier;
   }
   return modTotal
 }
