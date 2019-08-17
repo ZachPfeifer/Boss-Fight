@@ -5,6 +5,11 @@ let target = {
   name: 'Demon Knight',
   health: 100,
   hits: 0,
+  actions: {
+    slap: 1,
+    punch: 5,
+    kick: 10,
+  },
   item: []
 }
 //NOTE Items
@@ -12,12 +17,12 @@ var items = {
   healthPosion: {
     name: 'Estus Flask',
     modifier: 5,
-    description: 'Drink to heal your HP for +5.'
+    description: 'Drink to add +5 to damage per attack.'
   },
-  throwAble: {
+  fireMod: {
     name: 'Fire Bomb',
     modifier: 10,
-    description: 'Burns Target for 10 damage.'
+    description: 'Burns Target for 10 damage per attack.'
   },
   weaponMod: {
     name: 'Charcoal Pine Resin',
@@ -44,12 +49,38 @@ function kick() {
 
   update()
 }
-//NOTE item Functions
+//NOTE item Functions 
+//FIXME Construction
 function giveHealthPosions() {
-  target.items.push('healthPosion')
+  target.items.push(items.healthPosion.modifier)
+  if (target.actions.slap) {
+    target.health -= 1 + addMod();
+  } else if (target.action.punch) {
+    target.health -= 5 + addMod();
+  } else if (target.actions.kick) {
+    target.health -= 10 + addMod();
+  }
 }
-function giveThrowAble() {
-  target.items.push('throwAble')
+
+// function useHealthPosions() {
+//   if (slap) {
+//     target.health -= 1 + addMod();
+//   } else if (punch) {
+//     target.health -= 5 + addMod();
+//   } else {
+//     target.health -= 10 + addMod();
+//   }
+// }
+
+function giveFireMod() {
+  target.items.push(items.fireMod)
+  // if (slap) {
+  //   target.health -= 1 + addMod();
+  // } else if (punch) {
+  //   target.health -= 5 + addMod();
+  // } else {
+  //   target.health -= 10 + addMod();
+  // }
 }
 function giveWeaponMod() {
   target.items.push('weaponMod')
@@ -58,8 +89,9 @@ function giveWeaponMod() {
 // function item(){
 // if ()
 //}
+//FIXME end of constructio
 
-//NOTE  Add Mods 
+//NOTE  Add Mod total 
 function addMod() {
   //I C FE
   let modTotal = 0;
