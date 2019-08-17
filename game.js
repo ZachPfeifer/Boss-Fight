@@ -34,8 +34,12 @@ var items = {
 function slap() {
   target.health -= 1
   target.hits += 1
+  if (giveHealthPosions) {
+    target.health -= 1 + addMod();
+  } else
 
-  update()
+
+    update()
 }
 function punch() {
   target.health -= 5
@@ -53,24 +57,25 @@ function kick() {
 //FIXME Construction
 function giveHealthPosions() {
   target.items.push(items.healthPosion.modifier)
-  if (target.actions.slap) {
-    target.health -= 1 + addMod();
-  } else if (target.action.punch) {
-    target.health -= 5 + addMod();
-  } else if (target.actions.kick) {
-    target.health -= 10 + addMod();
-  }
+  // if (target.actions.slap) {
+  //   target.health -= 1 + addMod();
+  // } else if (target.action.punch) {
+  //   target.health -= 5 + addMod();
+  // } else if (target.actions.kick) {
+  //   target.health -= 10 + addMod();
+  // }
 }
 
-// function useHealthPosions() {
-//   if (slap) {
-//     target.health -= 1 + addMod();
-//   } else if (punch) {
-//     target.health -= 5 + addMod();
-//   } else {
-//     target.health -= 10 + addMod();
-//   }
-// }
+function useHealthPosions() {
+  giveHealthPosions(); slap();
+  //   if (slap) {
+  //     target.health -= 1 + addMod();
+  //   } else if (punch) {
+  //     target.health -= 5 + addMod();
+  //   } else {
+  //     target.health -= 10 + addMod();
+  //   }
+}
 
 function giveFireMod() {
   target.items.push(items.fireMod)
