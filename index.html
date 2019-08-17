@@ -33,9 +33,17 @@
     <div class="row">
       <div class="col-4 player-1">
         <h2>Player 1</h2>
-        <button class="slap" onClick="slap()">Slap</button>
-        <button class="kick" onClick="kick()">Kick</button>
-        <button class="punch" onClick="punch()">Punch</button>
+        <div class="row actions">
+          <button class="slap" onClick="slap()">Slap</button>
+          <button class="kick" onClick="kick()">Kick</button>
+          <button class="punch" onClick="punch()">Punch</button>
+        </div>
+        <div class="row items">
+          <button class="healthPosion" onClick="slap()">Estus Flask</button>
+          <button class="throwAble" onClick="giveThrowAble()">Fire Bomb</button>
+          <button class="weaponMod" onClick="punch(), throwAble()">Charcoal Pine Resin</button>
+
+        </div>
       </div>
       <div class="col-4 player-2">
         <h2>Player 2</h2>
