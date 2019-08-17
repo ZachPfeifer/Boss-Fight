@@ -1,11 +1,12 @@
 // let health = 100
 // let name = "Demon Knight"
 // let hits = 0
+let hiddenElem = document.getElementById("hidden")
 let target = {
   name: 'Demon Knight',
   health: 100,
   hits: 0,
-  Backpack: []
+  backpack: []
 }
 //NOTE Items
 var items = {
@@ -21,7 +22,7 @@ var items = {
   },
   weaponMod: {
     name: 'Charcoal Pine Resin',
-    modifier: 16,
+    modifier: 15,
     description: 'Applies fire damage to weapon. Gives +15 attacks'
   },
 }
@@ -47,13 +48,20 @@ function kick() {
 }
 //NOTE item Functions
 function giveHealthPosions() {
-  target.Backpack.push(items.healthPosion)
+  target.backpack.push(items.healthPosion)
+  //Remove Hidden / Active item
+  document.getElementById("hidden").innerHTML = "Estus Flask is Active +5 Damage";
+  hiddenElem.classList.remove('hidden')
 }
 function giveThrowAble() {
-  target.Backpack.push(items.throwAble)
+  target.backpack.push(items.throwAble)
+  document.getElementById("hidden").innerHTML = "Fire Weapon Mod is Active +10 Damage";
+  hiddenElem.classList.remove('hidden')
 }
 function giveWeaponMod() {
-  target.Backpack.push(items.weaponMod)
+  target.backpack.push(items.weaponMod)
+  document.getElementById("hidden").innerHTML = "Charcoal Pin Resin is Active +15 Damage";
+  hiddenElem.classList.remove('hidden')
 }
 //NOTE New item Function
 // function item(){
@@ -64,8 +72,8 @@ function giveWeaponMod() {
 function addMod() {
   //I C FE
   let modTotal = 0;
-  for (let i = 0; i < target.Backpack.length; i++) {
-    modTotal = target.Backpack[i].modifier;
+  for (let i = 0; i < target.backpack.length; i++) {
+    modTotal = target.backpack[i].modifier;
   }
   return modTotal
 }
