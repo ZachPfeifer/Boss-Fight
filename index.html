@@ -50,7 +50,11 @@
               <!--End of health bars-->
             </b></div>
           <!--NOTE Restart Button-->
-          <button id="hiddenreload" class="btn btn-dark hiddenreload" onClick="reload()">Restart</button>
+          <div class="row">
+            <div class="offset-4 col-4">
+              <button id="hiddenreload" class="btn btn-dark hiddenreload" onClick="restart()">Restart</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -62,10 +66,13 @@
         <div class="row actions">
           <!--NOTE Actions-->
           <h5><b> Actions: </b></h5>
-          <button class="jab btn-dark" onClick="jab()">Jab</button>
-          <button class="slash btn-dark" onClick="slash()">Slash</button>
-          <button class="thrust btn-dark" onClick="thrust()">Thrust</button>
+          <button class="jab btn-dark" onClick="jab('player1')">Jab</button>
+          <button class="slash btn-dark" onClick="slash('player1')">Slash</button>
+          <button class="thrust btn-dark" onClick="thrust('player1')">Thrust</button>
         </div>
+        <hr>
+        <!--NOTE Player Health-->
+        <span>Health: <span id="healthplayer1"> --</span></span>
         <hr>
         <!--NOTE items-->
         <h5><b> Items: </b></h5>
@@ -96,12 +103,14 @@
 
           <!--NOTE Actions-->
           <h5><b> Actions: </b></h5>
-          <button class="jab btn-dark" onClick="jab()">Jab</button>
-          <button class="slash btn-dark" onClick="slash()">Slash</button>
-          <button class="thrust btn-dark" onClick="thrust()">Thrust</button>
+          <button class="jab btn-dark" onClick="jab('player2')">Jab</button>
+          <button class="slash btn-dark" onClick="slash('player2')">Slash</button>
+          <button class="thrust btn-dark" onClick="thrust('player2')">Thrust</button>
         </div>
         <hr>
-
+        <!--NOTE Player Health-->
+        <span>Health: <span id="healthplayer2"> --</span></span>
+        <hr>
         <!--NOTE items-->
         <h5> <b> Items: </b></h5>
         <div class="row items">
@@ -130,10 +139,13 @@
         <div class="row actions">
           <!--NOTE Actions-->
           <h5> <b> Actions: </b></h5>
-          <button class="jab btn-dark" onClick="jab()">Jab</button>
-          <button class="slash btn-dark" onClick="slash()">Slash</button>
-          <button class="thrust btn-dark" onClick="thrust()">Thrust</button>
+          <button class="jab btn-dark" onClick="jab('player3')">Jab</button>
+          <button class="slash btn-dark" onClick="slash('player3')">Slash</button>
+          <button class="thrust btn-dark" onClick="thrust('player3')">Thrust</button>
         </div>
+        <hr>
+        <!--NOTE Player Health-->
+        <span>Health: <span id="healthplayer3"> --</span></span>
         <hr>
         <!--NOTE Items-->
         <h5><b> Items: </b></h5>

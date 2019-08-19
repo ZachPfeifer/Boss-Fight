@@ -7,12 +7,27 @@ let hiddenElem2 = document.getElementById("hidden2")
 let hiddenElem3 = document.getElementById("hidden3")
 
 
+
 let target = {
   name: 'Demon Knight',
   health: 100,
   hits: 0,
   backpack: []
 }
+
+let players = {
+  player1: {
+    health: 100
+  },
+  player2: {
+    health: 100
+  },
+  player3: {
+    health: 100
+
+  }
+}
+
 //NOTE Items
 var items = {
   healthPosion: {
@@ -32,22 +47,33 @@ var items = {
   },
 }
 //NOTE Actions
-function jab() {
+//FIXME Construction Player Damage when attacking boss
+function jab(player) {
+  if (players[player].health < 1) {
+  }
   target.health -= 1 + addMod()
   target.hits += 1
-
+  players[player].health -= 1
+  //test Console
+  console.log(players[player].health)
 
   update()
 }
-function slash() {
+function slash(player) {
+  if (players[player].health < 1) {
+  }
   target.health -= 5 + addMod()
   target.hits += 1
+  players[player].health -= 5
 
   update()
 }
-function thrust() {
+function thrust(player) {
+  if (players[player].health < 1) {
+  }
   target.health -= 10 + addMod()
   target.hits += 1
+  players[player].health -= 10
 
   update()
 }
@@ -86,27 +112,44 @@ function addMod() {
 
 function update() { // This will be responsible for updating the user interface whenever a value changes.
   //let healthElem = document.getElementById('#health').innerText;
+  //Target player
   let healthElem = document.querySelector('#health');
   healthElem.textContent = target.health.toString();
   let nameElem = document.querySelector('#name');
   nameElem.textContent = target.name;
   let hitsElem = document.querySelector('#hits');
   hitsElem.textContent = target.hits.toString();
-}
-//FIXME Construction (Stretch Goals)
-function reload() {
-  //   location.reload()//how to reload page
-  if (target.health >= 0) {
-    let reloadButtonElem = document.getElementById('#hiddenreload')
-    reloadButtonElem.classList.remove('#hiddenreload')
-    window.location.reload(true);
+  //player1 health
+  let healthplayer1Elem = document.querySelector('#healthplayer1');
+  healthplayer1Elem.textContent = players.player1.health.toString();
+  //player2 health
+  let healthplayer2Elem = document.querySelector('#healthplayer2');
+  healthplayer2Elem.textContent = players.player2.health.toString();
+  //player3 health
+  let healthplayer3Elem = document.querySelector('#healthplayer3');
+  healthplayer3Elem.textContent = players.player3.health.toString();
+
+  //page reload
+  if (target.health <= 0) {
+    reload()
   }
 }
+//NOTE  Reload/Restart (Stretch Goals)
+function reload() {
+  //   location.reload()//how to reload page
+  let reloadButtonElem = document.getElementById('hiddenreload')
+  reloadButtonElem.classList.remove('hiddenreload')
 
+}
+
+function restart() {
+  window.location.reload(true)
+}
+//FIXME Construction
 function healthBar() {
   let forthHealth = document.querySelector('#hiddenbar')
-  if (target.health >= 0) {
-
+  if (target.health >= 25) {
+    forthHealth.classList.remove('#hiddenbar')
   }
 }
 update()
