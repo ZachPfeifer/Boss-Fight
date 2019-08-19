@@ -93,4 +93,20 @@ function update() { // This will be responsible for updating the user interface 
   let hitsElem = document.querySelector('#hits');
   hitsElem.textContent = target.hits.toString();
 }
+//FIXME Construction (Stretch Goals)
+function reload() {
+  //   location.reload()//how to reload page
+  if (target.health >= 0) {
+    let reloadButtonElem = document.getElementById('#hiddenreload')
+    reloadButtonElem.classList.remove('#hiddenreload')
+    window.location.reload(true);
+  }
+}
+
+function healthBar() {
+  let forthHealth = document.querySelector('#')
+  if (target.health >= 25) {
+
+  }
+}
 update()

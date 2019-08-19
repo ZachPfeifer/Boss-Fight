@@ -43,6 +43,12 @@ padding-top: 25px;
 .hidden3{
   display: none;
 }
+.hiddenbar{
+    display: none;
+  }
+.hiddenreload{
+  display: none;
+}
 
 
 h1 h2 h4 h5{ 
