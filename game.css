@@ -13,6 +13,13 @@ body{
 img{
   padding: 5px;
 }
+progress {
+        background-color: green;
+        border: 0;
+        height: 18px;
+        border-radius: 9px;
+        opacity: .5;
+      }
 .all-players,  .boss-info{
 float:left;
 color:black;

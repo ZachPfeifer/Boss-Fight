@@ -49,31 +49,41 @@ var items = {
 //NOTE Actions
 //FIXME Construction Player Damage when attacking boss
 function jab(player) {
+  //Player dmamage
   if (players[player].health < 1) {
   }
-  target.health -= 1 + addMod()
-  target.hits += 1
   players[player].health -= 1
   //test Console
   console.log(players[player].health)
 
+  //target damage
+  target.health -= 1 + addMod()
+  target.hits += 1
+  //Target Health bar
+  let healthBar = document.getElementById("healthbar")
+  healthBar.value -= 1 + addMod()
   update()
 }
 function slash(player) {
   if (players[player].health < 1) {
   }
+  players[player].health -= 5
+
   target.health -= 5 + addMod()
   target.hits += 1
-  players[player].health -= 5
+  let healthBar = document.getElementById("healthbar")
+  healthBar.value -= 5 + addMod()
 
   update()
 }
 function thrust(player) {
   if (players[player].health < 1) {
   }
+  players[player].health -= 10
   target.health -= 10 + addMod()
   target.hits += 1
-  players[player].health -= 10
+  let healthBar = document.getElementById("healthbar")
+  healthBar.value -= 10 + addMod()
 
   update()
 }
@@ -148,7 +158,7 @@ function restart() {
 //FIXME Construction
 function healthBar() {
   let forthHealth = document.querySelector('#hiddenbar')
-  if (target.health >= 25) {
+  if (target.health <= 0) {
     forthHealth.classList.remove('#hiddenbar')
   }
 }
