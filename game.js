@@ -68,6 +68,7 @@ function giveWeaponMod() {
   document.getElementById("hidden3").innerHTML = "Charcoal Pin Resin is Active +15 Damage";
   hiddenElem3.classList.remove('hidden3')
 }
+
 //NOTE New item Function
 // function item(){
 // if ()
