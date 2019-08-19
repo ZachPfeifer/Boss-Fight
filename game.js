@@ -104,8 +104,8 @@ function reload() {
 }
 
 function healthBar() {
-  let forthHealth = document.querySelector('#')
-  if (target.health >= 25) {
+  let forthHealth = document.querySelector('#hiddenbar')
+  if (target.health >= 0) {
 
   }
 }
